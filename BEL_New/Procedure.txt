@@ -1,0 +1,33 @@
+Files:
+invent_frontend
+  /src
+    App.js
+    SparesManagement.jsx
+inventory_management
+  /myAPI
+    urls.py
+    views.py
+
+copy the above files from pen drive to system
+
+goto source code VS Code invent_front_end\src\SparesManagement.jsx
+
+function apiBase() {
+  return 'http://192.168.1.7:8000/api';
+}
+
+goto source code VS Code invent_front_end\src\App.js
+
+function apiBase() {
+  return 'http://192.168.1.7:8000/api';
+}
+
+open powershell and go to
+PS E:\BEL\inventory_management>
+restart inventory management  powershell apps stop (Ctrl+c)  
+E:\BEL\inventory_management> python manage.py runserver (IP ADDRESS of local/serverPC):8000
+
+another powershell stop (Ctrl+c) (invent_frontend)
+PS E:\BEL\invent_front_end> rm -r -fo build
+PS E:\BEL\invent_front_end>npm run build
+PS E:\BEL\invent_front_end>npm start
